@@ -1,0 +1,25 @@
+.expenditure-table {
+    max-height: "80vh";
+    overflow-y: "auto";
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px #6f7172fd !important;
+    margin-top: 20px;
+
+}
+
+.expenditure-table th,
+.expenditure-table thead {
+    background-color: #727171 !important;
+    color: #f3efef !important;
+    font-size: 18px !important;
+}
+
+.expenditure-table td {
+    font-size: 17px !important;
+}
+
+.expenditure-table th,
+.expenditure-table td {
+    border:none !important;
+    text-align: center !important;
+}

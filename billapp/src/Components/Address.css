@@ -1,0 +1,135 @@
+.action-btn {
+  border: none;
+  padding: 6px 12px;
+  margin: 0 4px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* View Button */
+.action-btn.view {
+  background-color: #bcc6d1;
+  color: black;
+}
+
+.action-btn.view:hover {
+  background-color: #9ba1a7;
+  transform: scale(1.05);
+}
+
+/* new button */
+.action-btn.new {
+  background-color: #c9e6d1;
+  color: black;
+}
+
+.action-btn.new:hover {
+  background-color: #8dbba0;
+  transform: scale(1.05);
+}
+
+/* Download Button */
+.action-btn.download {
+  background-color: #cde6fa;
+    color: black;
+
+}
+
+.action-btn.download:hover {
+  background-color: #a1bbcf;
+  transform: scale(1.05);
+}
+
+/* Edit Button */
+.action-btn.edit {
+  background-color: #ceddf8;
+  color: black;
+
+}
+
+.action-btn.edit:hover {
+  background-color: #bdd2f8;
+  transform: scale(1.05);
+}
+
+/* Delete Button */
+.action-btn.delete {
+  background-color: #ffe2df;
+  color: black;
+
+}
+
+.action-btn.delete:hover {
+  background-color: #e4b8b6;
+  transform: scale(1.05);
+}
+
+/* //clear button */
+.action-btn.clear {
+  background-color: #020202;
+  color: #e0e3e6;
+
+}
+
+.action-btn.clear:hover {
+  background-color: #434446;
+  transform: scale(1.05);
+}
+
+
+.address-hover {
+  cursor: pointer;
+  /* text-decoration: underline dotted; */
+}
+
+.alert {
+  margin: 10px 20px;
+  transition: opacity 0.5s ease;
+}
+
+/* it is for see the title like what is this when hover */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: auto;
+  font-size: x-small;
+  background-color: #2b2929ec;
+  color: #dad1d1;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1;
+  top: 26px;
+  left: 55px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.conversion-toggle-btn {
+  padding: 8px 12px;
+  margin-left: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.conversion-toggle-btn:hover {
+  background-color: #e0e0e0;
+}

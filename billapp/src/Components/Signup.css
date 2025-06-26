@@ -1,0 +1,61 @@
+/* Signup.css */
+
+section.vh-100 {
+  background-color: #f8f9fa;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.link-primary {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.link-primary:hover {
+  text-decoration: underline;
+}
+
+input[type="password"],
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding-right: 40px;
+}
+
+.position-relative span {
+  color: #6c757d;
+}
+
+.position-relative span:hover {
+  color: #0d6efd;
+}

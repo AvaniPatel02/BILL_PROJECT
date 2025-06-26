@@ -1,0 +1,101 @@
+.balance-sheet-container {
+    height: 100vh;
+  padding: 10px 20px 20px 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     /* background-color: #f1f1f1; */
+}
+
+.bs-heading {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #222;
+}
+
+.bs-subheading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0c0b0b;
+}
+
+.bs-total-deposits {
+    background-color: #bec2c5;
+    border: 1px solid #c3e6cb;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.bs-total-amount {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: #155724;
+    margin-top: 8px;
+}
+
+.bs-flex-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.bs-half1,
+.bs-half {
+    flex: 1 1 48%;
+    /* min-width: 300px; */
+    height: -webkit-fill-available;;
+    border-radius: 8px;
+    padding: 20px 24px;
+    
+}
+
+.bs-padding-right {
+    padding-right: 20px;
+}
+
+.bs-padding-left {
+    padding-left: 20px;
+}
+.balance-sheet-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .balance-sheet-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .balance-sheet-box {
+    width: 45%;
+    border: 1px solid #aaa;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+  /* .balance-sheet-row, .balance-sheet-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 1.1em;
+  } */
+  .balance-sheet-total {
+    font-weight: bold;
+    border-top: 1px solid #aaa;
+    padding-top: 8px;
+  }
+  .balance-sheet-img {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 50px;   /* Adjust size as needed */
+    height: 50px;
+    object-fit: contain;
+  }
+
+ 
+.left {
+      width: 50%;
+  }
+  .right{
+      width: 50%;
+  }

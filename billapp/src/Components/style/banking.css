@@ -1,0 +1,78 @@
+/* thhis css for banking */
+.form-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  /* background-color: #fffffff6; */
+  border-radius: 12px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Button row (Company/Bill/etc) */
+.button-group {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.btn-all {
+  color: #ffffff;
+  width: 211px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #6f7172fd;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px #6f7172fd;
+  border: none;
+font-size: 17px;
+}
+
+.btn-all:hover {
+  background-color: #6b6d74;
+  /* nice blue hover */
+  transform: scale(1.05);
+}
+
+.button-sumbit-banking {
+  background-color: #195277;
+  border: none;
+  font-size: 17px;
+}
+
+.button-sumbit-banking:hover {
+  background-color: #2a75a7;
+}
+
+.button-add-banking {
+  background-color: #49677a;
+  color: white;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.button-add-banking:hover {
+  background-color: #7894a7;
+  transform: translateY(-1px);
+}
+
+.button-add-banking:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+
+
+
+
+

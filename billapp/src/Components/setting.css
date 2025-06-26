@@ -1,0 +1,273 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f6fa;
+  margin: 0;
+  padding: 0;
+  
+}
+
+h1.hedding {
+  text-align: center;
+  margin: 50px 0;
+  font-weight: 700;
+}
+
+label {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.formbody {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.fastinput {
+  width: 50%;
+}
+
+.form-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  color: #00a8e8;
+  margin-bottom: 30px;
+}
+
+.choisinputflex {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.selectfilflex {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px #6f7172fd;
+
+  max-width: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-box h3 {
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-row.full-width input {
+  flex: 1;
+}
+
+.fastinput input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+textarea {
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hsn-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hsn-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.hsn-add-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-items: center;
+}
+.hsn-add-btn:hover {
+  background-color: #195a85;
+}
+
+.hsn-code-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hsn-code-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f9fa;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #dfe4ea;
+}
+
+.hsn-code-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.hsn-remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hsn-remove-btn:hover {
+  background-color: #631f18;
+}
+/* Upload Section */
+.upload-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.upload-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.upload-file {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  width: 250px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.upload-preview {
+  margin-top: 4px;
+  text-align: center;
+}
+
+.preview-text {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+.preview-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    background-color: #f9fafb;
+    margin: 10px 191px 18px 189px;
+}
+
+/* Textarea Section */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.textarea-field {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  resize: vertical;
+  min-height: 80px;
+  background-color: #fff;
+  color: #111827;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.textarea-field:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+.buttonuplod {
+    display: flex
+;
+    justify-content: center;
+    margin-top: 39px;
+}
+.btn-all {
+  color: #ffffff;
+  width: 211px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #6f7172fd;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px #6f7172fd;
+  border: none;
+
+}
+
+.btn-all:hover {
+  background-color: #6b6d74;
+  /* nice blue hover */
+  transform: scale(1.05);
+}
+
+.button-sumbit-banking {
+  background-color: #195277;
+  border: none;
+}
+
+.button-sumbit-banking:hover {
+  background-color: #2a75a7;
+}
+

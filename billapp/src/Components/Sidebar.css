@@ -1,0 +1,134 @@
+/* Sidebar styles */
+.sidebar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100vh;
+    background-color: #2c2b2bda;
+    color: white;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    border-radius: 0px 0px 50px 0px ;
+  }
+  
+  .sidebar-fixed:hover {
+    width: 220px;
+  }
+  
+  .sidebar-header-bg {
+    background-color: #829aad94;
+    color: white;
+  }
+  
+  .sidebar-fixed .sidebar-nav {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  
+  .sidebar-fixed .nav-item {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    color: rgb(240, 241, 247);
+    cursor: pointer;
+    transition: background-color 0.9s;
+  }
+  
+  .sidebar-fixed .nav-item i {
+    font-size: 1.2rem;
+    width: 30px;
+    text-align: center;
+  }
+  
+  .sidebar-fixed .nav-item span {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .sidebar-fixed:hover .nav-item span {
+    opacity: 1;
+    margin-left: 10px;
+  }
+  
+  .sidebar-fixed .nav-item:hover {
+    background-color: #969bb9;
+    border-radius: 10px;
+  }
+  
+  /* Optional: logo image size */
+  .icon-image, .compunylogo-image {
+    width: 40px;
+    height: auto;
+  }
+  
+  .sidebar-fixed .nav-item.active {
+    background-color: #6c7088!important;
+    font-weight: bold;
+    border-left: 4px solid #fff;
+    border-radius: 10px;
+  }
+  
+
+/* //header */
+
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 60px;
+  background-color: #a4cde093;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.header-right {
+  flex: 1;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+/* Profile image */
+.profile-image {
+  height: 100%;               
+  max-height: 60px;            
+  max-width: 100%;             
+  object-fit: contain;      
+   padding: 5px;   
+  box-sizing: border-box;
+}
+
+.profile-image:hover {
+  transform: scale(1.6);
+}
+
+/* Profile icon */
+.profile-icon {
+  font-size: 26px;
+  color: #2e3a59;
+  transition: color 0.3s ease;
+}
+
+.profile-icon.clickable:hover {
+  color: #6179b6;
+}

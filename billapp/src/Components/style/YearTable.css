@@ -1,0 +1,178 @@
+.year-bill-container {
+  height: 100vh;
+  padding: 10px 20px 20px 80px;
+  /* background-color: #e3e8ebaf; */
+}
+
+.header-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 40px 10px 0;
+}
+
+.new-bill-btn {
+  background-color: #195277;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.new-bill-btn:hover {
+  background-color: #2a75a7;
+  transform: scale(1.05);
+
+}
+
+.bill-table-section .title {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+.table-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #6f7172fd;
+  background-color: #ebebeb;
+}
+
+.year-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.year-table th {
+  padding: 14px 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  background-color: rgb(114, 113, 113);
+}
+
+.year-table thead {
+  color:rgb(243, 239, 239);
+  text-align: left;
+}
+
+
+.year-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 17px;
+}
+
+.table-row {
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.table-row:hover {
+  background-color: rgb(202, 201, 201);
+}
+
+.year-link {
+  color: #333;
+  font-weight: 500;
+}
+
+/* year-table csss */
+
+.year_container {
+  height: 100vh;
+  padding: 10px 20px 20px 80px;
+  /* background-color: #e3e8ebaf; */
+  
+}
+
+.year_container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: #333;
+
+}
+
+.error-text {
+  color: #e71e17;
+  font-weight: 500;
+  background-color: #d6bcbfa4;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px #6f7172fd;
+  
+}
+.custom-table th,
+.custom-table thead {
+  background-color: #727171;
+  color: #f3efef;
+  font-size: 18px;
+
+}
+
+.custom-table td {
+  font-size: 17px;
+}
+.custom-table th,
+.custom-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.view-button,
+.download-button,
+.delete-button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.view-button{
+  background-color: #bcc6d1  ;
+  color: black ;
+}
+.view-button:hover {
+  background-color: #9ba1a7;
+  transform: scale(1.05);
+}
+
+.download-button {
+   background-color: #cde6fa ;
+  color: black ;
+}
+
+.download-button:hover {
+  background-color: #a1bbcf;
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background-color: #ffe2df ;
+  color: black ;
+}
+
+.delete-button:hover {
+  background-color: #e4b8b6;
+  transform: scale(1.05);
+}

@@ -1,0 +1,705 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(126, 126, 126, 0.1);
+}
+.border.border-gray-300.p-2.rounded.flex.items-center.justify-between.cursor-pointer.bg-white {
+    width: 276px !important;
+}
+
+
+.absolute.bg-white.border.border-gray-300.w-full.mt-1.rounded.shadow-lg.z-10 {
+    width: 276px !important;
+    padding: 10px;
+    height: 260px;
+        position: absolute;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        background: white;
+        z-index: 1;
+        overflow-y: hidden;
+        width: 100%;
+        box-shadow: 0 2px 10px rgb(0 0 0 / 10%) !important;
+        transition: all 0.3s ease;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.table-bordered {
+    margin-bottom: 20px;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid rgb(80, 80, 80) !important;
+}
+
+.black-bordered {
+    border: 2px solid rgb(97, 94, 94);
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+.main-box{
+    padding: 15px 15px 0px 15px !important;
+    margin-bottom: 4px;
+}
+.hr{
+    border-top: 1px solid rgb(0 0 0) !important;
+    padding: 10px !important;
+  
+}
+.signatory{
+    margin-top: -96px;
+}
+
+td.gray-background {
+    background-color: #f1f3f4 !important;
+}
+select#countryDropdown {
+    border: 1px solid;
+}
+
+.invoice-table {
+    border: 2px solid black;
+    width: 100%;
+}
+img.icon-image {
+    width: 50px;
+    height: 39px;
+    object-fit: cover;
+}
+img.compunylogo-image {
+    width: 100%;
+    height: 55px;
+    object-fit: cover;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 2px solid black;
+    text-align: center;
+    padding: 8px;
+}
+.d-grid.d-md-flex.justify-content-center p{
+    padding: 6px 10px 7px 10px;
+    margin: 0px;
+    font-size: 28px;
+    font-weight: 700;
+  
+  
+}
+
+thead th {
+    background-color: #f1f3f4 ;
+}
+.rounded{
+    border-radius: 10px !important;
+}
+.invoice-table .total-row {
+    font-weight: bold;
+}
+.amount-box{
+    padding: 10px 0px 0 10px;
+}
+/* .top-right-corner {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    padding: 10px; 
+    z-index: 10; 
+} */
+.download-btn {
+    margin: 20px auto;
+    padding: 15px 30px;
+    background-color: #001a57;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    width: fit-content;
+}
+li.nav-link:hover{
+    background-color: #2ecc71 !important;
+}
+
+.download-btn:hover {
+    background-color: #407b9e;
+   
+}
+
+.nav-link:hover {
+    background-color: rgba(35, 122, 223, 0.788)!important;
+    font-weight: bold;
+    color: #fffdfd !important;
+    transition:1.5s ease,color 1.5s ease,gap 1.5s ease;
+}
+
+.original-pdf {
+    width: 100%;  /* A4 width */
+    height: 150%; /* A4 height */
+    padding: 50px;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Hide overflow to ensure everything fits on one page */
+}
+
+
+/* .sidebar.sidebar-narrow-unfoldable.border-end{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(77 164 185))!important;
+} */
+.naw-biladd {
+    background-color: #6c7ae0;
+    font-weight: 700;
+    border-radius: 29px;
+    text-align: center;
+    border: 0px;
+    height: 35px;
+    width: 141px;
+    color: #fff;
+    transition:3s;
+}
+.naw-biladd:hover {
+   background-color: #6c7ae0;
+    font-weight: 700;
+    border-radius: 29px;
+    text-align: center;
+    border: 0px;
+    height: 35px;
+    width: 141px;  
+    color: #000;
+    
+}
+
+button.viewbutton {
+    background-color: #6c7ae0;
+    border: 0px;
+    border-radius: 44px;
+    width:100px;
+    padding: 7px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: background-image 2s ease, transform 2s ease;
+}
+
+button.viewbutton:hover {
+    background-color: #6c7ae0;
+    transform: scale(1.05);
+    color: #000;
+}
+
+button.downloadbutton {
+    background-color: #6c7ae0;
+    border: 0px;
+    border-radius: 44px;
+    width: 110px;
+    padding: 7px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: background-image 2s ease, transform 2s ease;
+}
+button.downloadbutton:hover {
+    background-color: #6c7ae0;    
+    border: 0px;
+    border-radius: 44px;
+    padding: 7px;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+   
+}
+
+button.newaddbillbutton {
+    background-color: #6c7ae0;
+    border: 0px;
+    border-radius: 44px;
+    width: 100px;
+    padding: 7px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: background-image 2s ease, transform 2s ease;
+}
+button.newaddbillbutton:hover {
+    background-color: #6c7ae0;
+    border: 0px;
+    border-radius: 44px;
+    padding: 7px;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    
+}
+
+.buttongrup{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+input[type="search"] {
+    width: 100%; /* Full width */
+    padding: 10px 15px; /* Padding inside the input */
+    margin: 8px 0; /* Margin around the input */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width/height */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-family: 'Arial', sans-serif; /* Font family */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border and shadow */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="search"]:focus {
+    border-color: #66afe9; /* Border color on focus */
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* Slight shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="number"]::placeholder,
+input[type="search"]::placeholder {
+    color: #aaa; /* Placeholder text color */
+    opacity: 1; /* Ensure opacity is consistent across browsers */
+}
+
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="number"]:disabled,
+input[type="search"]:disabled {
+    background-color: #f2f2f2; /* Light background for disabled input */
+    cursor: not-allowed; /* Not-allowed cursor */
+    border-color: #ddd; /* Border color for disabled input */
+}
+
+input[type="text"].error,
+input[type="email"].error,
+input[type="password"].error,
+input[type="number"].error,
+input[type="search"].error {
+    border-color: #e74c3c; /* Red border for error state */
+}
+
+input[type="text"].success,
+input[type="email"].success,
+input[type="password"].success,
+input[type="number"].success,
+input[type="search"].success {
+    border-color: #2ecc71; /* Green border for success state */
+}
+
+.date-tables input{
+    padding: 2px;
+    margin: 2px;
+}
+.logo-image{
+    width: 100px;
+    margin-top: -104px;
+    margin-right: 15px;
+}
+
+
+
+.dropdown {
+    position: relative;
+  
+    cursor: pointer;
+}
+
+.pdfbutton{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+button.bg-blue-500.text-white.px-4.py-2.rounded.mt-4 {
+    background-color: #0f2d5e;
+    height: 61px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 0px;
+}
+.dropdown-selected {
+    padding: 12px 15px;
+    border: 1px solid #302f2f; 
+    border-radius: 5px;
+    background: white;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.dropdown-selected:hover {
+    border-color: #0056b3; 
+}
+
+.dropdown-list {
+    position: absolute;
+    border: 1px solid #007bff; 
+    border-radius: 5px;
+    background: white;
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none; /* Initially hidden */
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease;
+}
+
+.dropdown-list input {
+    width: calc(100% - 20px); /* Leave some padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.dropdown-list input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.dropdown-list div {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.dropdown-list div div:hover {
+    background-color: #f0f8ff; /* Light blue on hover */
+    color: #007bff; /* Change text color on hover */
+}
+
+/* Optional: Hide scrollbar in dropdown */
+.dropdown-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.gray-background{
+    background: #f2f2f2;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb:hover {
+    background: #007bff; /* Blue on hover */
+}
+
+.dropdown-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.table-bordered.black-bordered.amount-box {
+    border: 1px solid;
+    position: relative;
+}
+
+.top-right-corner {
+    position: absolute !important;
+    top: 0;
+    right: 15px;
+    padding: 10px;
+    z-index: 10;
+}
+.lut {
+    border: 1px solid rgb(66, 64, 64);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px 10px;
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+.custom-hr{
+    border: 0;
+    border-top: 1px solid #000;
+    margin-top: 2.5px !important;
+    margin-bottom: 2.5px !important;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.box{
+    border: 1px solid #cbcbcb;
+    padding: 5px;
+    border-radius: 2px;
+}
+.sgst-tex {
+    border: 0px !important;
+    width: 90px !important;
+    padding: 0px 0px 0px 5px !important;
+    margin: 0px !important;
+}
+
+.cgst-tex {
+    border: 0px !important;
+    width: 90px !important;
+    padding: 0px 0px 0px 5px !important;
+    margin: 0px !important;
+}
+
+button.copybutton {
+    border: 1px solid;
+    border-radius: 5px;
+}
+.hidden-for-pdf {
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
+  }
+
+.incoice-no-td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Add spacing between elements */
+}
+
+.decrement,
+.increment {
+    padding: 5px 10px; /* Adjust button size */
+    font-size: 16px; /* Make text inside buttons readable */
+    cursor: pointer; /* Add pointer cursor for better UX */
+    border: 1px solid #ccc; /* Add border for better visibility */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    transition: background-color 0.3s ease; /* Hover effect */
+}
+
+.decrement:hover,
+.increment:hover {
+    background-color: #e0e0e0; /* Slightly darker hover background */
+}
+
+.invoiceNumber {
+    width: 60px; /* Set a fixed width */
+    text-align: center; /* Center text inside the input */
+    font-size: 16px; /* Font size for better readability */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Add padding for input */
+    background-color: #fff; /* White background */
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+button.socealicon-button {
+    margin: 10px;
+    border: 0px;
+    padding: 10px;
+    width: 47px;
+    border-radius: 50px;
+    background-color: #317feb;
+    color: white;
+}
+.divider:after, .divider:before {
+    content: "";
+    flex: 1 1;
+    height: 1px;
+    background: #000!important;
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+
+
+
+/* copyaddress */
+.address-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .address-full {
+    display: none;
+    background: #f9f9f9;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-width: 300px;
+    word-wrap: break-word;
+  }
+  
+  .address-wrapper:hover .address-full {
+    display: block;
+  }
+  
+  .address-short {
+    cursor: pointer;
+    color: #333;
+  }
+  
+
+  .tableheding {
+    color: #ffffff;
+    background: #6c7ae0;
+}
+.address-hover {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .address-hover:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+  }
+  
+  button.px-4.py-2.rounded {
+    width: 200px;
+    background-color: #5da7e7;
+    color: white;
+    font-weight: 600;
+    border: 0px;
+    height: 50px;
+}
+
+.black-bordered,
+.black-bordered th,
+.black-bordered td {
+  border: 1px solid black !important;
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+
+.toast-error {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4451ff;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+
+/* Add to your Taxinvoice.css */
+.input-error {
+  border: 1px solid #6644ff !important;
+}
+
+.error-message {
+  color: #6644ff;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.Toastify__toast {
+  font-size: 14px;
+}
+
+.Toastify__toast--error {
+  background-color: #ffffff;
+}
+
+.input-error {
+  border: 1px solid rgb(167, 230, 21);
+}
+
+.error-message {
+  color: rgb(0, 255, 170);
+  font-size: 12px;
+}
+
+.Toastify__progress-bar--error {
+    background: rgb(29, 54, 163);
+}
+
+.states{
+    padding-top: 10px !important;
+    height: 47px;
+}
+.inr-conversion {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.inr-conversion {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.inr-conversion-words {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+  display: block;
+}
+
+.exchange-rate-note {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
