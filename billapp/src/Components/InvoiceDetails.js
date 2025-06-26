@@ -5,6 +5,20 @@ import autoTable from 'jspdf-autotable';
 // import html2canvas from "html2canvas";
 import './style/invoiceDetail.css';
 
+const getCurrencySymbol = (currencyCode) => {
+  switch (currencyCode) {
+    case "INR":
+      return "₹";
+    case "USD":
+      return "$";
+    case "EUR":
+      return "€";
+    // Add more as needed
+    default:
+      return currencyCode || "";
+  }
+};
+
 const InvoiceDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -39,9 +53,13 @@ const InvoiceDetails = () => {
       },
     })
       .then((res) => (res.ok ? res.json() : Promise.reject("Failed to fetch invoices")))
-      .then((all) => setInvoices(all.filter((i) => i.buyer_gst === buyer_gst)))
+      .then((all) => setInvoices(
+        all.filter((i) =>
+          (i.buyer_name || "").trim().toLowerCase() === (buyer_name || "").trim().toLowerCase()
+        )
+      ))
       .catch((err) => setError(err.toString()));
-  }, [buyer_gst, token]);
+  }, [buyer_name, token]);
 
   useEffect(() => {
     if (!token) return;
@@ -213,10 +231,10 @@ const InvoiceDetails = () => {
             <td className="text-center">{inv.invoice_number}</td>
             <td className="text-right">-</td>
             <td className="text-right">
-              {inv.currency} {total.toFixed(2)}
+              {getCurrencySymbol(inv.currency)} {total.toFixed(2)}
             </td>
             <td className="text-right">
-              {inv.currency} {Math.abs(balance).toFixed(2)}
+              {getCurrencySymbol(inv.currency)} {Math.abs(balance).toFixed(2)}
             </td>
           </tr>
         );
@@ -238,11 +256,11 @@ const InvoiceDetails = () => {
               <td className="text-center">{formatDate(dep.transaction_date)}</td>
               <td>{dep.notice || "Deposit"}</td>
               <td className="text-right">
-                {inv.currency} {amount.toFixed(2)}
+                {getCurrencySymbol(inv.currency)} {amount.toFixed(2)}
               </td>
               <td className="text-right">-</td>
               <td className="text-right">
-                {inv.currency} {Math.abs(balance).toFixed(2)}
+                {getCurrencySymbol(inv.currency)} {Math.abs(balance).toFixed(2)}
               </td>
             </tr>
           );
@@ -333,13 +351,13 @@ const InvoiceDetails = () => {
             <tr className="remaining-balance">
               <td colSpan={2} className="text-end p-2">Total Balance:</td>
               <td className="text-right p-2">
-                {currency} {renderTableRows().totalCredit.toFixed(2)}
+                {getCurrencySymbol(currency)} {renderTableRows().totalCredit.toFixed(2)}
               </td>
               <td className="text-right p-2">
-                {currency}  {renderTableRows().totalDebit.toFixed(2)}
+                {getCurrencySymbol(currency)}  {renderTableRows().totalDebit.toFixed(2)}
               </td>
               <td className="text-right p-2">
-                {currency} {Math.abs(balance).toFixed(2)}
+                {getCurrencySymbol(currency)} {Math.abs(balance).toFixed(2)}
               </td>
             </tr>
           </tbody>

@@ -231,7 +231,7 @@ const BillManager = () => {
                           <td>{index + 1}</td>
                           <td>{txn.source}</td>
                           <td>{txn.name}</td>
-                          <td>{txn.amount}</td>
+                          <td>{Math.abs(txn.amount).toFixed(2)}</td>
                           <td>{txn.date ? new Date(txn.date).toLocaleDateString("en-GB") : "-"}</td>
                           <td>{txn.note}</td>
                         </tr>

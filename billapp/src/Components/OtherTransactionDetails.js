@@ -77,7 +77,7 @@ const OtherTypeTransactions = () => {
         description: txn.other_notice || "-",
         credit: isCredit ? `INR ${rawAmount.toFixed(2)}` : "-",
         debit: !isCredit ? `INR ${Math.abs(rawAmount).toFixed(2)}` : "-",
-        balance: `INR ${balance.toFixed(2)}`,
+        balance: `INR ${Math.abs(balance).toFixed(2)}`,
       };
     });
 
@@ -96,7 +96,7 @@ const OtherTypeTransactions = () => {
     let currentY = 29;
     pdf.text(`Type: ${type}`, margin, currentY);
     currentY += 7;
-    pdf.text(`Total Balance: INR ${balance.toFixed(2)}`, margin, currentY);
+    pdf.text(`Total Balance: INR ${Math.abs(balance).toFixed(2)}`, margin, currentY);
     currentY += 6;
 
     // 1️⃣ Add total summary row to dataRows
@@ -105,7 +105,7 @@ const OtherTypeTransactions = () => {
       description: "Total Balance:",
       credit: `INR ${totalCredit.toFixed(2)}`,
       debit: `INR ${Math.abs(totalDebit).toFixed(2)}`,
-      balance: `INR ${balance.toFixed(2)}`
+      balance: `INR ${Math.abs(balance).toFixed(2)}`
     });
     let lastRowIndex = dataRows.length - 1;
 
@@ -194,7 +194,7 @@ const OtherTypeTransactions = () => {
         <td className="text-right">
           {!isCredit ? `₹ ${Math.abs(rawAmount).toFixed(2)}` : "-"}
         </td>
-        <td className="text-right">₹ {balance.toFixed(2)}</td>
+        <td className="text-right">₹ {Math.abs(balance).toFixed(2)}</td>
       </tr>
     );
   });
@@ -228,7 +228,7 @@ const OtherTypeTransactions = () => {
               <strong>Name:</strong> {type}
             </p>
             <p>
-              <strong>Total Balance:</strong> ₹ {balance.toFixed(2)}
+              <strong>Total Balance:</strong> ₹ {Math.abs(balance).toFixed(2)}
             </p>
           </div>
 
@@ -289,7 +289,7 @@ const OtherTypeTransactions = () => {
               </td>
               <td className="text-right p-2">{totalCredit.toFixed(2)}</td>
               <td className="text-right p-2">{Math.abs(totalDebit).toFixed(2)}</td>
-              <td className="text-right p-2">{balance.toFixed(2)}</td>
+              <td className="text-right p-2">{Math.abs(balance).toFixed(2)}</td>
             </tr>
           </tbody>
         </table>

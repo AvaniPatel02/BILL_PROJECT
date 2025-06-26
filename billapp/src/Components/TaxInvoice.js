@@ -1613,7 +1613,7 @@ const Taxinvoice = () => {
       </div>
       <div className="pdfbutton">
         <button
-          onClick={handleSubmit}
+          onClick={isSubmitted ? handleDownloadPDF : handleSubmit}
           className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
           disabled={loading}
         >

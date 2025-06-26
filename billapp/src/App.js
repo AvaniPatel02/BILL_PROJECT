@@ -5,7 +5,7 @@ import YearDetails from "./Components/YearDetails";
 import Clients from "./Components/Clients";
 import Dashboard from "./Components/Dashboard";
 import Address from "./Components/Address.js";
-import Billsfillers from "./Components/Billsillers";
+import Billsfilters from "./Components/Billsfilters.js";
 import FilteredResults from "./Components/FilteredResults";
 import TaxInvoice from "./Components/TaxInvoice";
 import Setting from "./Components/Setting";
@@ -26,11 +26,11 @@ import Buyer from "./Components/Buyer.js";
 import EditInvoice from "./Components/EditInvoice.js";
 import Employee from "./Components/Employee.js";
 import EmployeeDetails from "./Components/EmployeeDetails.js";
-import IncomeExpenditure from "./Components/IncomeExpenditure .js";
+import IncomeExpenditure from "./Components/IncomeExpenditure.js";
 // import OtherTransactionDetails from "./Components/OtherTransactionDetails.js";
 import OtherTypeTransactions from "./Components/OtherTransactionDetails.js";
 import CompanyTransactions from "./Components/CompanyTransactions.js";
-import BankAdd from "./Components/BankAdd .js";
+import BankAdd from "./Components/BankAdd.js";
 import BuyerTransaction from "./Components/BuyerTransaction.js";
 // import IncomeExpenditure from "./Components/CorrectFileName.js"; // use correct file name
 // import IncomeExpenditure from "./Components/IncomeExpenditure.js";
@@ -62,7 +62,7 @@ const AppContent = () => {
           <Route path="/clients" element={<Clients />} />
           <Route path="/address" element={<Address />} />
           <Route path="/view-invoice/:name" element={<ViewInvoice />} />
-          <Route path="/billsfilter" element={<Billsfillers />} />
+          <Route path="/billsfilter" element={<Billsfilters />} />
           <Route path="/filtered-results" element={<FilteredResults />} />
           <Route path="/tax-invoice" element={<TaxInvoice />} />
           <Route path="/setting" element={<Setting />} />

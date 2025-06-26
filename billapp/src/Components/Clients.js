@@ -239,24 +239,24 @@ const Clients = () => {
     return `${day}-${month}-${year}`;
   };
 
-  const handleNewBill = (invoice) => {
+  const handleNewBill = (group) => {
     navigate('/tax-invoice', {
       state: {
         buyerData: {
-          buyer_name: invoice?.buyer_name || '',
-          buyer_address: invoice?.buyer_address || '',
-          buyer_gst: invoice?.buyer_gst || '',
+          buyer_name: group.buyer_name || '',
+          buyer_address: group.buyer_address || '',
+          buyer_gst: group.buyer_gst || '',
         },
         consigneeData: {
-          consignee_name: invoice?.consignee_name || '',
-          consignee_address: invoice?.consignee_address || '',
-          consignee_gst: invoice?.consignee_gst || '',
+          consignee_name: group.consignee_name || '',
+          consignee_address: group.consignee_address || '',
+          consignee_gst: group.consignee_gst || '',
         },
         countryData: {
-          country: invoice?.country || 'India',
-          currency: invoice?.currency || 'INR',
-          state: invoice?.state || '',
-          destination: invoice?.destination || '',
+          country: group.country || 'India',
+          currency: group.currency || 'INR',
+          state: group.state || '',
+          destination: group.destination || '',
         }
       }
     });
@@ -449,7 +449,7 @@ const Clients = () => {
                       <div className="tooltip-container">
                         <button
                           className="action-btn new"
-                          onClick={() => handleNewBill(invoice)}
+                          onClick={() => handleNewBill(group)}
                           disabled={loading}
                         >
                           <i className="fa-solid fa-plus"></i>
