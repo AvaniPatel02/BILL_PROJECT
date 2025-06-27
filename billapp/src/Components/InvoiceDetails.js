@@ -15,7 +15,7 @@ const getCurrencySymbol = (currencyCode) => {
       return "€";
     // Add more as needed
     default:
-      return currencyCode || "";
+      return "₹";
   }
 };
 
@@ -54,9 +54,13 @@ const InvoiceDetails = () => {
     })
       .then((res) => (res.ok ? res.json() : Promise.reject("Failed to fetch invoices")))
       .then((all) => setInvoices(
-        all.filter((i) =>
-          (i.buyer_name || "").trim().toLowerCase() === (buyer_name || "").trim().toLowerCase()
-        )
+        all.filter((i) => {
+          // Name must match
+          if ((i.buyer_name || "").trim().toLowerCase() !== (buyer_name || "").trim().toLowerCase()) return false;
+          // If GST is present in both, it must match
+          if (i.buyer_gst && buyer_gst && i.buyer_gst.trim().toLowerCase() !== buyer_gst.trim().toLowerCase()) return false;
+          return true;
+        })
       ))
       .catch((err) => setError(err.toString()));
   }, [buyer_name, token]);
@@ -105,47 +109,75 @@ const InvoiceDetails = () => {
     const { rows, balance, currency } = renderTableRows();
 
     // ✅ Total balance at the top
-    doc.text(`Total Balance: INR ${Math.abs(balance).toFixed(2)}`, margin, cursorY);
+    doc.text(`Total Balance: ${getCurrencySymbol(currency)} ${Math.abs(balance).toFixed(2)}`, margin, cursorY);
     cursorY += 10;
 
-    const tableRows = [];
-    const cellStyles = [];
+    // Reuse the logic from renderTableRows to build the tableRows for PDF
+    let pdfBalance = 0;
+    const from = fromDate ? new Date(fromDate) : null;
+    const to = toDate ? new Date(toDate) : null;
 
-    rows.forEach(row => {
-      const cells = [];
-      const styles = [];
+    // Filter invoices as in renderTableRows
+    const filteredInvoices = invoices.filter((inv) => {
+      const invDate = new Date(inv.invoice_date);
+      const inInvoiceRange = (!from || invDate >= from) && (!to || invDate <= to);
 
-      Array.from(row.props.children).forEach((cell, colIndex) => {
-        let val = cell.props.children;
-        if (Array.isArray(val)) val = val.join(" ");
-        if (typeof val !== "string" && typeof val !== "number") val = "";
-
-        if (colIndex === 1) {
-          const isInvoiceNumber = /^\d{2}-\d{4}\/\d{4}$/.test(val);
-          styles.push({ halign: isInvoiceNumber ? "center" : "left" });
-        } else if (colIndex >= 2) {
-          styles.push({ halign: "right" }); // ✅ Align Credit, Debit, Balance
-        } else {
-          styles.push({});
-        }
-
-        cells.push(val);
+      const hasDepositInRange = buyerDeposits.some((d) => {
+        if (d.invoice_id !== inv.invoice_number) return false;
+        const depDate = new Date(d.transaction_date);
+        return (!from || depDate >= from) && (!to || depDate <= to);
       });
 
-      tableRows.push(cells);
-      cellStyles.push(styles);
+      return inInvoiceRange || hasDepositInRange;
     });
 
-    // ✅ Add Total Balance row at end in last column
-    const totalRow = ["", "Total Balance:", `INR ${totalCredit.toFixed(2)}`, `INR ${totalDebit.toFixed(2)}`, `INR ${Math.abs(balance).toFixed(2)}`];
-    tableRows.push(totalRow);
-    cellStyles.push([
-      { fillColor: [241, 245, 249], textColor: [12, 74, 110] },
-      { fontStyle: "bold", halign: "right", fillColor: [241, 245, 249], textColor: [12, 74, 110] },
-      { halign: "right", fontStyle: "bold", fillColor: [241, 245, 249], textColor: [12, 74, 110] },
-      { halign: "right", fontStyle: "bold", fillColor: [241, 245, 249], textColor: [12, 74, 110] },
-      { halign: "right", fontStyle: "bold", fillColor: [241, 245, 249], textColor: [12, 74, 110] }
-    ]);
+    // Group and sort as in renderTableRows
+    const invoiceGroups = {};
+    filteredInvoices.forEach((inv) => {
+      const prefix = inv.invoice_number?.substring(0, 2);
+      if (!invoiceGroups[prefix]) {
+        invoiceGroups[prefix] = [];
+      }
+      invoiceGroups[prefix].push(inv);
+    });
+    const sortedPrefixes = Object.keys(invoiceGroups).sort((a, b) => Number(b) - Number(a));
+
+    const tableRows = [];
+    sortedPrefixes.forEach((prefix) => {
+      const group = invoiceGroups[prefix].sort(
+        (a, b) => new Date(a.invoice_date) - new Date(b.invoice_date)
+      );
+      group.forEach((inv) => {
+        const total = Number(inv.total_with_gst) || 0;
+        pdfBalance -= total;
+        tableRows.push([
+          formatDate(inv.invoice_date),
+          inv.invoice_number,
+          "-", // Credit
+          `${getCurrencySymbol(inv.currency)} ${total.toFixed(2)}`,
+          `${getCurrencySymbol(inv.currency)} ${Math.abs(pdfBalance).toFixed(2)}`
+        ]);
+        // Deposits
+        const deposits = buyerDeposits
+          .filter((d) => d.invoice_id === inv.invoice_number)
+          .filter((d) => {
+            const depDate = new Date(d.transaction_date);
+            return (!from || depDate >= from) && (!to || depDate <= to);
+          })
+          .sort((a, b) => new Date(a.transaction_date) - new Date(b.transaction_date));
+        deposits.forEach((dep) => {
+          const amount = Number(dep.amount) || 0;
+          pdfBalance += amount;
+          tableRows.push([
+            formatDate(dep.transaction_date),
+            dep.notice || "Deposit",
+            `${getCurrencySymbol(inv.currency)} ${amount.toFixed(2)}`,
+            "-",
+            `${getCurrencySymbol(inv.currency)} ${Math.abs(pdfBalance).toFixed(2)}`
+          ]);
+        });
+      });
+    });
 
     autoTable(doc, {
       startY: cursorY,

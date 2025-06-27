@@ -1,0 +1,64 @@
+{
+  "name": "bilingapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "express": "^5.1.0",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.3",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "mongoose": "^8.15.0",
+    "multer": "^2.0.0",
+    "number-to-words": "^1.2.4",
+    "react": "^19.1.0",
+    "react-bootstrap-icons": "^1.11.5",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.55.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.2",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.10.1",
+    "react-to-print": "^3.0.5",
+    "react-toastify": "^11.0.5",
+    "recharts": "^2.15.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "https://d28e-2401-4900-8898-8803-5c18-878c-4acc-2fa1.ngrok-free.app",
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "typescript": "^4.9.5"
+  }
+}

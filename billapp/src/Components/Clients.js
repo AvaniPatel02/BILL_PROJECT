@@ -246,17 +246,6 @@ const Clients = () => {
           buyer_name: group.buyer_name || '',
           buyer_address: group.buyer_address || '',
           buyer_gst: group.buyer_gst || '',
-        },
-        consigneeData: {
-          consignee_name: group.consignee_name || '',
-          consignee_address: group.consignee_address || '',
-          consignee_gst: group.consignee_gst || '',
-        },
-        countryData: {
-          country: group.country || 'India',
-          currency: group.currency || 'INR',
-          state: group.state || '',
-          destination: group.destination || '',
         }
       }
     });
