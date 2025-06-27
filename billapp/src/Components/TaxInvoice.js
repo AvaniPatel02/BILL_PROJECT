@@ -835,10 +835,9 @@ const Taxinvoice = () => {
   return (
     <div style={{ paddingLeft: "70px", fontFamily: "Arial, sans-serif" }} onSubmit={handleSubmit}>
       <ToastContainer />
-      <div style={{ paddingRight: "10px" }}>
+      <div style={{ paddingRight: "10px" }} ref={pdfRef}>
         <h2 className="text-center">TAX INVOICE</h2>
-
-        <div className="table-bordered black-bordered main-box" style={{ backgroundColor: "white" }} ref={pdfRef}>
+        <div className="table-bordered black-bordered main-box" style={{ backgroundColor: "white" }} >
           <div className="row date-tables">
             <div className="col-6">
               {/* Seller Info */}
@@ -1043,7 +1042,6 @@ const Taxinvoice = () => {
                       />
                     </td>
                   </tr>
-
                   <tr>
                     <td>Destination</td>
                     <td>

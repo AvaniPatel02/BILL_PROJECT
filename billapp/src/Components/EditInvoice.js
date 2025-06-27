@@ -556,12 +556,6 @@ const EditInvoice = () => {
       fontSize: "20px",
       lineHeight: "1.6"
     }}>
-      <h2 className="text-center" style={{ fontWeight: "bold", margin: "20px 0 10px 0", fontSize: "2.2em" }}>TAX INVOICE</h2>
-      {/* ...rest of your invoice markup... */}
-      {/* For each <table> and <td>, add padding: 10px for better readability */}
-      {/* Example for a table cell: <td style={{ border: ..., padding: "10px" }}> ... */}
-      {/* You can also increase the font size for table headers if needed */}
-      {/* ...existing code continues... */}
     </div>
   );
 
@@ -573,6 +567,7 @@ const EditInvoice = () => {
 
   return (
     <div style={{paddingLeft:"80px"}}>
+      <h2 style={{ textAlign: 'center', marginBottom: '20px', fontWeight: 600 }}>TAX INVOICE</h2>
       <form onSubmit={handleSubmit}>
         {loading && <div className="text-center">Loading invoice data...</div>}
         
@@ -1238,7 +1233,7 @@ const EditInvoice = () => {
           left: "-9999px",
           fontFamily: "Arial, sans-serif",
           color: "#575757",
-          width: "200mm",
+          width: "80%",
           minHeight: "297mm",
           background: "white",
           boxSizing: "border-box",
